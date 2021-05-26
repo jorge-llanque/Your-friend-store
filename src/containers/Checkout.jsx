@@ -1,9 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Checkout() {
-    return (
-        <div>
-            checkout
-        </div>
-    )
+  return <div>checkout</div>;
 }
