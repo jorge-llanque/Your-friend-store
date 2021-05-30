@@ -5,16 +5,42 @@ import '../styles/components/Payment.css';
 
 
 
-export default function Payment() {
+export default function Payment({history}) {
 
-  const {state} = useContext(AppContext);
-  const {cart} = state;
+  const {state, addNewOrder} = useContext(AppContext);
+  const {cart, buyer} = state;
 
   const paypalOptions = {
-    clientId: '',
+    clientId: 'ATN4MgsCVKSXinkSTL1YqlANTikW5fXyo5C7TkyVUG7JB0DTr1G2aabkWFF9Uz6kKo61tL48cfWpomc4',
     intent: 'capture',
     currency: 'USD'
   }
+
+  const buttonStyles = {
+    layout: 'vertical',
+    shape: 'rect'
+  }
+
+  const handlePaymentSuccess = (data) => {
+    console.log(data);
+    if(data.status === 'COMPLETED'){
+      const newOrder = {
+        buyer,
+        product: cart,
+        payment: data
+      }
+      addNewOrder(newOrder);
+      history.push('/checkout/success');
+    }
+  }
+
+  const handleSumTotal = () => {
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.price;
+    const sum = cart.reduce(reducer, 0);
+    return sum;
+  };
+
 
   return (
     <div className="Payment">
@@ -34,11 +60,11 @@ export default function Payment() {
         ))}
         <div className="Payment-button">
           <PayPalButton 
-            paypalOptions={}
-            buttonStyles={}
-            amount={}
+            paypalOptions={paypalOptions}
+            buttonStyles={buttonStyles}
+            amount={handleSumTotal()} 
             onPaymentStart={() => console.log('Start Payment')}
-            onPaymentSuccess={data => console.log(data)}
+            onPaymentSuccess={data => handlePaymentSuccess(data)}
             onPaymentError={error => console.log(error)}
             onPaymentCancel={data => console.log(data)}
           />
