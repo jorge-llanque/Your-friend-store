@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className="Header">
       <h1 className="Header-title">
-        <Link to="/">PlatziConf Merch</Link>
+        <Link to="/">Merch</Link>
       </h1>
       <div className="Header-checkout">
         <Link to="/checkout">
