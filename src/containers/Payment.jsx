@@ -48,7 +48,7 @@ export default function Payment({history}) {
         <h3>Resumen del pedido:</h3>
         {cart.map((item) => (
           <div className="Payment-item" key={item.title} >
-            <div className="Payment element">
+            <div className="Payment-element">
               <h4>{item.title}</h4>
               <span>
                 $

@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
+  padding: 0 2rem;
  }
 .Checkout-item {
   width: 100%;

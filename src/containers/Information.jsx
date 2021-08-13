@@ -58,7 +58,7 @@ export default function Information() {
           </div>
         </div>
       </div>
-      <div className="Information-sidebar">
+      {/* <div className="Information-sidebar">
         <h3>Pedido:</h3>
 
         {cart.map((item) => (
@@ -69,7 +69,7 @@ export default function Information() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
