@@ -1,14 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiSearchAlt2} from 'react-icons/bi';
-import AppContext from '../context/AppContext';
 import logo from "../assets/logo.png"
 import '../styles/components/Header.css';
 
 
 export default function Header() {
-  const { state } = useContext(AppContext);
-  const { cart } = state;
 
   return (
     <div className="Header">
