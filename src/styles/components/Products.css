@@ -24,6 +24,7 @@
   }
   .Item_Offer-Icon {
     font-size: 2rem;
+    cursor: pointer;
   }
   .Item__Image {
     height: 20rem;
