@@ -1,17 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import initialState from '../initialState';
-import getProducts from '../services/getProducts'
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
-  const [products, setProducts] = useState([]);
 
-  useEffect(()=> {
-    getProducts().then( result =>{
-      setProducts(result)
-      console.log(result)
-    })
-  },[])
+  // useEffect(()=> {
+  //   getProducts().then( result =>{
+  //     setProducts(result)
+  //     console.log(result)
+  //   })
+  // },[])
   const addToCart = (payload) => {
     setState({
       ...state,
