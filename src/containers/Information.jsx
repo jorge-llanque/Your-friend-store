@@ -41,8 +41,10 @@ export default function Information() {
             <input type="text" placeholder="Ciudad" name="city" />
             <input type="text" placeholder="Pais" name="country" />
             <input type="text" placeholder="Estado" name="state" />
-            <input type="text" placeholder="Codigo postal" name="cp" />
-            <input type="text" placeholder="Telefono" name="phone" />
+            <div>
+              <input type="text" placeholder="Codigo postal" name="cp" />
+              <input type="text" placeholder="Telefono" name="phone" />
+            </div>
           </form>
         </div>
         <div className="Information-buttons">

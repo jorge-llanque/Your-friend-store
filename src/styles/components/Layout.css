@@ -17,8 +17,9 @@ a {
   text-decoration: none;
 }
 .Main {
-  padding: 10px;
   grid-template-columns: minmax(auto, 1024px);
   display: grid;
   justify-content: center;
+  height: 100vh;
+  position: relative;
 }
