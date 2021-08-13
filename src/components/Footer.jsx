@@ -11,12 +11,16 @@ export default function Footer() {
 
   return (
     <div className="Footer">
-      <BiHomeAlt className="Footer__Icon"/>
+      <Link to="/">
+        <BiHomeAlt className="Footer__Icon"/>
+      </Link>
       <Link to="/checkout" className="Checkout-Wrap">
         <BiCartAlt className="Footer__Icon"/>
         {cart.length > 0 && <div className="Checkout-Alert">{cart.length}</div>}
       </Link>
-      <BiGroup className="Footer__Icon"/>
+      <Link to="/">
+        <BiGroup className="Footer__Icon"/>
+      </Link>
     </div>
   );
 }

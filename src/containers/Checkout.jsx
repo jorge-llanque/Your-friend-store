@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import '../styles/components/Checkout.css';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
+import '../styles/components/Checkout.css';
 
 export default function Checkout() {
   const { state, removeFromCart } = useContext(AppContext);
@@ -21,14 +21,19 @@ export default function Checkout() {
   return (
     <div className="Checkout">
       <div className="Checkout-content">
-        {cart.length > 0 ? <h3>Lista de pedidos:</h3> : <h3>Sin pedidos...</h3>}
+        {cart.length > 0 ? <h3>My Cart</h3> : <h3>No orders...</h3>}
         {cart.map((item) => (
           <div className="Checkout-item">
             <div className="Checkout-element">
-              <h4>{item.title}</h4>
-              <span>${item.price}</span>
+              <div className="Checkout-Image">
+                <img src={item.image} alt="checkoutimage" />
+              </div>
+              <div className="Checkout-Info">
+                <h2>{item.title}</h2>
+                <span>${item.price}</span>
+              </div>
             </div>
-            <button type="button" onClick={handleRemove(item)}>
+            <button className="Item__Remove-Icon" type="button" onClick={handleRemove(item)}>
               <i className="fas fa-trash-alt" />
             </button>
           </div>
@@ -37,9 +42,12 @@ export default function Checkout() {
 
       {cart.length > 0 && (
         <div className="Checkout-sidebar">
-          <h3>{`Precio Total: $ ${handleSumTotal()}`}</h3>
+          <div className="Checkout__TotalPrice">
+            <span>Total</span>
+            <span>${handleSumTotal()}</span>
+          </div>
           <Link to="/checkout/information">
-            <button type="button">Continuar pedido</button>
+            <button type="button">Buy Now</button>
           </Link>
         </div>
       )}
