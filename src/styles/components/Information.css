@@ -1,6 +1,5 @@
 .Information {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   margin: 0 0 4em 0;
@@ -58,7 +57,7 @@ h2 {
   padding: 0;
 }
 h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   margin: 0 0 8px 0;
   padding: 0;
 }
@@ -70,9 +69,9 @@ input {
   color: rgba(0,0,0,0.75);
   display: inline-block;
   font-feature-settings: "tnum";
-  font-size: 14px;
-  height: 32px;
-  line-height: 32px;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
   list-style: none;
   margin: 0 0 8px 0;
   outline: 0;
@@ -85,20 +84,26 @@ input {
 }
 .Information button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-  background-color: #63b8ee;
+  background-color: #f26b27;
   border-radius: 6px;
-  border: 1px solid #3866a3;
+  border: 1px solid #f26b27;
   display: inline-block;
   cursor: pointer;
-  color: #14396a;
+  color: #fff;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 6px 24px;
+  padding: 0.6rem 2.4rem;
   text-decoration: none;
   text-shadow: 0px 1px 0px #7cacde;
   width: 100%;
   display: block;
   outline: none;
+}
+
+@media screen and (min-width:768px){
+
+  .Information-content {
+    padding: 2rem 8rem;
+  }
 }

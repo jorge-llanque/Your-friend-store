@@ -53,9 +53,9 @@
     cursor: pointer;
     color: #fff;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 1.6rem;
     font-weight: bold;
-    padding: 6px 24px;
+    padding: 0.6rem 2.4rem;
     text-shadow: 0px 1px 0px #f26b27;
     width: 100%;
     display: block;
@@ -66,4 +66,16 @@
 }
 .Checkout__TotalPrice span {
   font-size: 2rem;
+}
+
+@media screen and (min-width: 768px){
+  .Checkout {
+    padding: 0 7rem;
+  }
+  .Checkout-Info {
+    font-size: 1.6rem;
+  }
+  .Item__Remove-Icon {
+    font-size: 2rem;
+  }
 }
