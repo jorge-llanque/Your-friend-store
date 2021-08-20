@@ -26,6 +26,9 @@
     font-size: 2rem;
     cursor: pointer;
   }
+  .Item_Offer-Icon::checked {
+    color: rgb(243, 86, 86);
+  }
   .Item__Image {
     height: 20rem;
   }
