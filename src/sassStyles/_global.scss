@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
-
+@import './variables';
 * {
   margin: 0;
   padding: 0;
@@ -11,16 +11,9 @@ html {
 body {
   color: #3c484e;
   font-family: 'Open Sans', sans-serif;
+  background-color: $color-white;
 }
 a {
   color: #3c484e;
   text-decoration: none;
-}
-.Main {
-  grid-template-columns: minmax(auto, 1024px);
-  grid-template-rows: 5rem auto 5rem;
-  display: grid;
-  justify-content: center;
-  height: 100vh;
-  position: relative;
 }

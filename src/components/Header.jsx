@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiSearchAlt2} from 'react-icons/bi';
 import logo from "../assets/logo.png"
-import '../styles/components/Header.css';
+import '../styles/components/Header.scss';
 
 
 export default function Header() {

@@ -1,0 +1,63 @@
+@import './../../sassStyles/variables';
+
+.Products-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+    justify-content: center;
+    grid-row-gap: 1.5em;
+    grid-gap: 1.5rem;
+    padding: 10px 0;
+
+    &-item {
+      display: grid;
+      box-shadow: 8px 14px 38px rgba(39,44,49,0.06), 1px 3px 8px rgba(39,44,49,0.03);
+      border-radius: 15px;
+      position: relative;
+      background-color: $color-gray;
+    }
+  }
+
+  .Item{
+    &__Header {
+    display: flex;
+    height: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    }
+    
+    &__Offer {
+      font-size: 1.6rem;
+      font-weight: 700;
+
+      &-Icon {
+        font-size: 2rem;
+        cursor: pointer;
+        transition: color 1s ease;
+
+        &:hover {
+          color: rgb(243, 86, 86);
+        }
+      }
+    }
+
+    &__Image {
+      height: 20rem;
+       img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .Product-item-info {
+    padding: 1rem 2rem;
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  
+  .Item__Price {
+    font-size: 1.2rem;
+  }

@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import AppContext from '../context/AppContext'
-import '../styles/components/Success.css';
+import '../styles/components/Success.scss';
 import Map from "../components/Map";
 import useGoogleAddress from '../hooks/useGoogleAddress';
 

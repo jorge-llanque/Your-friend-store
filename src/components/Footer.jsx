@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import { BiHomeAlt, BiCartAlt, BiGroup } from 'react-icons/bi'
 import AppContext from "../context/AppContext"
-import '../styles/components/Footer.css';
+import '../styles/components/Footer.scss';
 
 
 export default function Footer() {

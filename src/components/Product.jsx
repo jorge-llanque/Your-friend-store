@@ -7,7 +7,7 @@ export default function Product({ product, handleAddToCart }) {
     <div className="Products-item">
        <header className="Item__Header">
           <span className="Item__Offer">30% OFF</span>
-          <AiFillHeart className="Item_Offer-Icon" onClick={handleAddToCart(product)}/>
+          <AiFillHeart className="Item__Offer-Icon" onClick={handleAddToCart(product)}/>
        </header>
        <div className="Item__Image">
         <img src={product.image} alt={product.title} />
