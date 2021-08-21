@@ -1,0 +1,52 @@
+.Banner {
+  background-color: aliceblue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-height: 40rem;
+  padding: 1rem 2rem;
+  &__Description {
+    height: 20rem;
+    h1 {
+      font-weight: 700;
+      font-size: 4rem;
+      color: #000;
+    }
+    h2 {
+      color: rgb(223, 67, 67);
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+  &__Memberships {
+    span {
+      font-size: 1rem;
+    }
+    &-Logo {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 1rem;
+      li {
+        width: 7rem;
+        height: 4rem;
+      }
+    }
+  }
+  
+  &-Image {
+    position: absolute;
+    top: 0;
+    right: 7rem;
+    width: 30rem;
+    opacity: 0.2;
+    @media screen and (min-width: 768px) {
+      opacity: 1;
+    }
+    @media screen and (min-width: 1024px) {
+      top: -20px;
+      width: 50rem;
+    }
+  }
+}

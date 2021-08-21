@@ -1,9 +1,7 @@
 .Main {
   grid-template-columns: minmax(auto, 1024px);
-  grid-template-rows: 5rem auto 5rem;
   display: grid;
   justify-content: center;
   height: 100vh;
   position: relative;
-  row-gap: 1rem;
 }
