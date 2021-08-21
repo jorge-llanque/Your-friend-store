@@ -41,7 +41,7 @@
     padding: 10px;
     color: #fff;
     font-size: 1.1rem;
-    transform: translate(90deg);
+    transform: rotate(325deg);
 
       &-Icon {
         display: inline-block;
@@ -75,4 +75,7 @@
   
   .Item__Price {
     font-size: 1.2rem;
+  }
+  .painted {
+    color: rgb(241, 255, 42);
   }

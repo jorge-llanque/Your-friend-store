@@ -1,7 +1,9 @@
 import React from 'react';
-import {AiFillHeart} from 'react-icons/ai'
+import {AiFillHeart,AiFillStar} from 'react-icons/ai'
+
 
 export default function Product({ product, handleAddToCart }) {
+
 
   return (
     <div className="Products-item">
@@ -13,7 +15,13 @@ export default function Product({ product, handleAddToCart }) {
         <img src={product.image} alt={product.title} />
        </div>
       <div className="Product-item-info">
-        <div className="Product-item-info-rating">rating</div>
+        <div className="Product-item-info-rating">
+          <AiFillStar className="Rating_Icon painted"/>
+          <AiFillStar className="Rating_Icon painted"/>
+          <AiFillStar className="Rating_Icon painted"/>
+          <AiFillStar className="Rating_Icon painted"/>
+          <AiFillStar className="Rating_Icon "/>
+        </div>
         <h2>{product.title}</h2>  
         <div className="Product-item-info-detail">
           <button type="button">Call tu action</button>
