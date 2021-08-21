@@ -1,12 +1,14 @@
 @import './../../sassStyles/variables';
 
-.Products-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
-    justify-content: center;
-    grid-row-gap: 1.5em;
-    grid-gap: 1.5rem;
-    padding: 10px 0;
+.Products {
+    &-items{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+      justify-content: center;
+      grid-row-gap: 1.5em;
+      grid-gap: 1.5rem;
+      padding: 10px 0;
+    }
 
     &-item {
       display: grid;

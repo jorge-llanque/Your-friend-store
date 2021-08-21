@@ -14,7 +14,7 @@ export default function Product({ product, handleAddToCart }) {
        </div>
       <div className="Product-item-info">
         <h2>{product.title}</h2>
-        <span className="Item__Price">$140</span>
+        <span className="Item__Price">${(product.price).toFixed(2)}</span>
       </div>
     </div>
   );
