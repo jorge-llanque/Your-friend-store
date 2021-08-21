@@ -1,8 +1,13 @@
 import React from 'react';
 import initialState from '../initialState';
 import Products from '../components/Products';
+import Banner from '../components/Banner'
 
 export default function Home() {
 
-  return <Products products={initialState.products} />;
-}
+  return (
+    <>
+    <Banner />
+    <Products products={initialState.products} />;
+    </>
+)}

@@ -1,31 +1,29 @@
 .Header {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-}
-.Header-Logo {
-  width: 10rem;
-}
-.Header-checkout {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  justify-items: center;
-  width: 30px;
-  margin: 0 0 0 0.5em;
-}
-.Header-alert {
-  color: #33b13a;
-  font-size: 14px;
-  margin-left: 5px;
-}
-.Header a {
-  text-decoration: none;
-  color: #33b1ff;
-}
-
-.Icon-Search {
-  width: 2rem;
-  font-size: 2rem;
+  padding: 1rem 2rem;
+  column-gap: 2rem;
+  &__Logo {
+    width: 10rem;
+  }
+  &__Nav {
+    display: none;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      display: inline;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 10px;
+      li {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__Checkout {
+    width: 5rem;
+  }
 }
