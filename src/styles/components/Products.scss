@@ -1,6 +1,7 @@
 @import './../../sassStyles/variables';
 
 .Products {
+  padding: 2rem 0;
     &-items{
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
@@ -21,17 +22,29 @@
 
   .Item{
     &__Header {
+    position: absolute;
+    width: 100%;
+    top: 10px;
     display: flex;
-    height: 5rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 20px;
     align-items: center;
     }
     
     &__Offer {
-      font-size: 1.6rem;
-      font-weight: 700;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #e86c3d;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    transform: translate(90deg);
 
       &-Icon {
+        display: inline-block;
         font-size: 2rem;
         cursor: pointer;
         transition: color 1s ease;
