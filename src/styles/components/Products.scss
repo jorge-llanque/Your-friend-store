@@ -71,11 +71,28 @@
       font-size: 18px;
       font-weight: bold;
     }
+    &-detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        background: #e6e6e6;
+        color: rgb(214, 89, 31);
+        transition: background 0.3s ease;
+        &:hover {
+          background: #dcdbdb;
+        }
+      }
+    }
   }
   
   .Item__Price {
     font-size: 1.2rem;
+    color: rgb(214, 89, 31);
   }
   .painted {
-    color: rgb(241, 255, 42);
+    color: #ffc00d;
   }

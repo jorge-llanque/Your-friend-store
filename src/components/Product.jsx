@@ -24,7 +24,7 @@ export default function Product({ product, handleAddToCart }) {
         </div>
         <h2>{product.title}</h2>  
         <div className="Product-item-info-detail">
-          <button type="button">Call tu action</button>
+          <button type="button">Add to cart</button>
           <span className="Item__Price">${(product.price).toFixed(2)}</span>
         </div>
       </div>
