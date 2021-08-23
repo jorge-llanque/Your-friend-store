@@ -1,6 +1,7 @@
 .Main {
-  grid-template-columns: minmax(auto, 1024px);
   display: grid;
+  grid-template-columns: minmax(auto, 1024px);
+  grid-auto-rows: max-content;
   justify-content: center;
   height: 100vh;
   position: relative;

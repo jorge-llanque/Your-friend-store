@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../context/AppContext';
@@ -17,12 +18,22 @@ export default function Checkout() {
     const sum = cart.reduce(reducer, 0);
     return sum;
   };
+  
+  const cartReformated = []
+
+  cart.forEach((elem) => {
+      if( !cartReformated.some(item => item.id === elem.id)){
+          const repetition = cart.filter((data) => elem.id === data.id)
+          elem.cantity = repetition.length
+          cartReformated.push(elem)
+      }
+  });
 
   return (
     <div className="Checkout">
       <div className="Checkout-content">
-        {cart.length > 0 ? <h3>My Cart</h3> : <h3>No orders...</h3>}
-        {cart.map((item) => (
+        {cartReformated.length > 0 ? <h3>My Cart</h3> : <h3>No orders...</h3>}
+        {cartReformated.map((item) => (
           <div className="Checkout-item">
             <div className="Checkout-element">
               <div className="Checkout-Image">
@@ -31,6 +42,7 @@ export default function Checkout() {
               <div className="Checkout-Info">
                 <h2>{item.title}</h2>
                 <span>${item.price}</span>
+                <span> Cantity{item.cantity}</span>
               </div>
             </div>
             <button className="Item__Remove-Icon" type="button" onClick={handleRemove(item)}>
@@ -40,7 +52,7 @@ export default function Checkout() {
         ))}
       </div>
 
-      {cart.length > 0 && (
+      {cartReformated.length > 0 && (
         <div className="Checkout-sidebar">
           <div className="Checkout__TotalPrice">
             <span>Total</span>
