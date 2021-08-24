@@ -42,7 +42,7 @@ export default function Checkout() {
               <div className="Checkout-Info">
                 <h2>{item.title}</h2>
                 <span>${item.price}</span>
-                <span> Cantity{item.cantity}</span>
+                <span> cantity {item.cantity}</span>
               </div>
             </div>
             <button className="Item__Remove-Icon" type="button" onClick={handleRemove(item)}>
