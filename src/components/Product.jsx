@@ -1,15 +1,13 @@
 import React from 'react';
-import {AiFillHeart,AiFillStar} from 'react-icons/ai'
+import {AiFillStar} from 'react-icons/ai'
 
 
 export default function Product({ product, handleAddToCart }) {
-
 
   return (
     <div className="Products-item">
        <header className="Item__Header">
           <div className="Item__Offer">30% OFF</div>
-          <AiFillHeart className="Item__Offer-Icon" onClick={handleAddToCart(product)}/>
        </header>
        <div className="Item__Image">
         <img src={product.image} alt={product.title} />
