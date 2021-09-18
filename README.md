@@ -7,7 +7,7 @@ This Project was builded to demostrate how to use React Context, Hooks with exte
 ## TECHNOLOGIES AND TOOLS
  In general I'm using javascript for the development. But for more specification I'm using:
  * Javascript
- * React
+ * ReactJS
  * CSS3
  * Redux
  * Jest
